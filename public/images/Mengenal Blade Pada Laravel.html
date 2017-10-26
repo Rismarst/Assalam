@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://www.dumetschool.com/blog/Mengenal-Blade-Pada-Laravel -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Expires" content="30">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <meta name="description" content="">
+            <title>    Mengenal Blade Pada Laravel</title>
+        <link rel="icon" type="image/x-icon" href="https://www.dumetschool.com/dsicon.ico">
+                    <!-- Bootstrap - Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="./Mengenal Blade Pada Laravel_files/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+            <!-- Optional theme -->
+            <link rel="stylesheet" href="./Mengenal Blade Pada Laravel_files/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+            <!-- Custom CSS -->
+            <link href="./Mengenal Blade Pada Laravel_files/custom.min.css" rel="stylesheet" type="text/css">
+            <link href="./Mengenal Blade Pada Laravel_files/black-tie.min.css" rel="stylesheet">
+            <link rel="stylesheet" href="./Mengenal Blade Pada Laravel_files/font-awesome.min.css">
+            <!-- Skitter Styles -->
+            <link href="./Mengenal Blade Pada Laravel_files/skitter.css" type="text/css" media="all" rel="stylesheet">
+                            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+            <script src="./Mengenal Blade Pada Laravel_files/1135584559861865" async=""></script><script async="" src="./Mengenal Blade Pada Laravel_files/fbevents.js.download"></script><script type="text/javascript" async="" src="./Mengenal Blade Pada Laravel_files/atrk.min.js.download"></script><script async="" charset="utf-8" src="./Mengenal Blade Pada Laravel_files/saved_resource" type="text/javascript"></script><script async="" src="./Mengenal Blade Pada Laravel_files/analytics.js.download"></script><script id="facebook-jssdk" src="./Mengenal Blade Pada Laravel_files/sdk.min.js.download"></script><script type="text/javascript" async="" src="./Mengenal Blade Pada Laravel_files/recaptcha__en.js.download"></script><script src="./Mengenal Blade Pada Laravel_files/jquery.min.js.download"></script>
+            <!-- Accordion -->
+            <link id="main-css" href="./Mengenal Blade Pada Laravel_files/accordion.css" rel="stylesheet">
+            <script type="text/javascript" src="./Mengenal Blade Pada Laravel_files/accordion.min.js.download"></script>
+            <script type="text/javascript">
+            var accordion;
+            jQuery(document).bind("ready", function(){
+                accordion = jQuery(".accordion-wrap").accordion();
+            });
+            </script>
+            <!-- Recaptcha https://www.google.com/recaptcha/api.js -->
+            <script src="./Mengenal Blade Pada Laravel_files/recaptchaapi.min.js.download"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <!-- Latest compiled and minified JavaScript -->
+            <script src="./Mengenal Blade Pada Laravel_files/bootstrap.min.js.download" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+            <style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.zopim { display: none !important }</style></head><body><div class="zopim" __jx__id="___$_21 ___$_21" data-test-id="ChatWidgetButton" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px; background: transparent; overflow: hidden; position: fixed; z-index: 16000002; width: 180px; height: 30px; right: 10px; bottom: 0px; display: none;"><iframe frameborder="0" src="./Mengenal Blade Pada Laravel_files/saved_resource.html" style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%; margin: 0px; overflow: hidden; display: block;" data-test-id="ChatWidgetButton-iframe"></iframe></div><div class="zopim" __jx__id="___$_4 ___$_4" data-test-id="ChatWidgetWindow" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px; background: transparent; overflow: hidden; position: fixed; z-index: 16000001; right: 10px; bottom: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; display: block; width: 240px; height: 200px; box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 3px 2px;"><iframe frameborder="0" src="./Mengenal Blade Pada Laravel_files/saved_resource(1).html" data-test-id="ChatWidgetWindow-iframe" style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%; margin: 0px; overflow: hidden; display: block;"></iframe></div><div id="fb-root"></div>
+            <script>
+                (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                //js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=944679192239217";
+                js.src = "//dumetschool.com/assets/js/sdk.min.js#xfbml=1&version=v2.8&appId=944679192239217";
+                fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            </script>
+            <!-- /facebook-button -->
+            <!-- Skitter JS -->
+            <script src="./Mengenal Blade Pada Laravel_files/jquery.easing.1.3.min.js.download"></script>
+            <script src="./Mengenal Blade Pada Laravel_files/jquery.skitter.min.js.download"></script>
+            <script>
+            $(document).ready(function(){
+              // Add smooth scrolling to all links
+              $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                  // Prevent default anchor click behavior
+                  event.preventDefault();
+
+                  // Store hash
+                  var hash = this.hash;
+
+                  // Using jQuery's animate() method to add smooth page scroll
+                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                  $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                  }, 800, function(){
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                  });
+                } // End if
+              });
+            });
+            </script>
+            <script>
+            $(function () {
+              $('[data-toggle="popover"]').popover()
+            })
+            </script>
+
+            <!-- Scroll to top -->
+    		<a href="https://www.dumetschool.com/blog/Mengenal-Blade-Pada-Laravel#" id="back-to-top" title="Back to top">↑</a>
+            <!-- Scroll to top end-->
+            <!-- Scroll -->
+            <script type="text/javascript">
+                if ($('#back-to-top').length) {
+                    var scrollTrigger = 100, // px
+                        backToTop = function () {
+                            var scrollTop = $(window).scrollTop();
+                            if (scrollTop > scrollTrigger) {
+                                $('#back-to-top').addClass('show');
+                            } else {
+                                $('#back-to-top').removeClass('show');
+                            }
+                        };
+                    backToTop();
+                    $(window).on('scroll', function () {
+                        backToTop();
+                    });
+                    $('#back-to-top').on('click', function (e) {
+                        e.preventDefault();
+                        $('html,body').animate({
+                            scrollTop: 0
+                        }, 700);
+                    });
+                }
+            </script>
+            <div style="display: none">
+                <!-- Google Code for Remarketing Tag -->
+                <!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup -->
+                <script type="text/javascript">
+                    /* <![CDATA[ */
+                    var google_conversion_id = 974813875;
+                    var google_custom_params = window.google_tag_params;
+                    var google_remarketing_only = true;
+                    /* ]]> */
+                </script>
+                <script type="text/javascript" src="./Mengenal Blade Pada Laravel_files/conversion.js.download"></script><iframe name="google_conversion_frame" title="Google conversion frame" width="300" height="13" src="./Mengenal Blade Pada Laravel_files/saved_resource(2).html" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></iframe>
+                <noscript>
+                    &lt;div style="display:inline;"&gt;
+                    &lt;img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/974813875/?value=0&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+                    &lt;/div&gt;
+                </noscript>
+            </div>
+            
+            <!-- GOOGLE ANALYICS -->
+            <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-45382709-1','dumetschool.com');ga('send','pageview');</script>
+            <!--Start of Zopim Live Chat Script-->
+            <script type="text/javascript">
+                window.$zopim || (function(d, s) {
+                    var z = $zopim = function(c) { z._.push(c) }, $ = z.s = d.createElement(s), e = d.getElementsByTagName(s)[0];
+                    z.set = function(o) {
+                        z.set.
+                        _.push(o)
+                    };
+                    z._ = [];
+                    z.set._ = [];
+                    $.async = !0;
+                    $.setAttribute('charset', 'utf-8');
+                    $.src = '//v2.zopim.com/?1x2FUTnlIVknDc20JsBwS6ZsVVB977xN';
+                    z.t = +new Date;
+                    $.
+                    type = 'text/javascript';
+                    e.parentNode.insertBefore($, e)
+                })(document, 'script');
+            </script>
+            <!-- Start Alexa Certify -->
+            <script type="text/javascript">
+                _atrk_opts = {
+                    atrk_acct: "CVEUi1a8Dy00GE",
+                    domain: "dumetschool.com",
+                    dynamic: true
+                };
+                (function() {
+                    var as = document.createElement('script');
+                    as.type = 'text/javascript';
+                    as.async = true;
+                    as.src = "https://www.dumetschool.com/assets/js/atrk.min.js";
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(as, s);
+                })();
+            </script>
+            <noscript>&lt;img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=CVEUi1a8Dy00GE" style="display:none" height="1" width="1" alt="" /&gt;</noscript>
+            <!-- End Alexa Certify -->
+                
+                    <!-- Facebook Pixel Code -->
+            <script>
+            !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1135584559861865'); // Insert your pixel ID here.
+            fbq('track', 'PageView');
+            </script>
+            <noscript>&lt;img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1135584559861865&amp;ev=PageView&amp;noscript=1"
+            /&gt;</noscript>
+            <!-- DO NOT MODIFY -->
+            <!-- End Facebook Pixel Code -->
+            
+    
+            <div class="container-fluid header"><div class="row"><nav class="navbar navbar-default"><div class="container-fluid"><div class="row"><div class="col-md-12"><div class="navbar-header"><button class="collapsed navbar-toggle" type="button" aria-expanded="false" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a href="https://www.dumetschool.com/" class="navbar-brand"><img class="img-responsive" src="./Mengenal Blade Pada Laravel_files/logo.png"></a></div><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav navbar-right"><li class="dropdown"><a href="https://www.dumetschool.com/blog/Mengenal-Blade-Pada-Laravel#" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" role="button">Program Kursus <span class="caret"></span></a> <ul class="dropdown-menu"> <li class="dropdown-header">Pilih Program Kursus:</li><li><a href="https://www.dumetschool.com/kursus-web-master">Web Master</a></li><li><a href="https://www.dumetschool.com/kursus-graphic-design">Graphic Design</a></li><li><a href="https://www.dumetschool.com/kursus-digital-marketing">Digital Marketing</a></li><li><a href="https://www.dumetschool.com/kursus-web-programming">Web Programming</a></li><li><a href="https://www.dumetschool.com/kursus-web-design">Web Design</a></li></ul></li><li class="dropdown"><a href="https://www.dumetschool.com/blog/Mengenal-Blade-Pada-Laravel#" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" role="button">Hubungi Kami <span class="caret"></span></a><ul class="dropdown-menu"><li class="dropdown-header">Pilih Lokasi Terdekat:</li><li><a>Cabang Kelapa Gading: (021) 4585-0387</a></li><li><a>Cabang Grogol: (021) 2941-1188</a></li><li><a>Cabang Tebet: (021) 2298-3886</a></li><li><a>Cabang Srengseng: (021) 5890-8355</a></li><li><a>Cabang Depok: (021) 7720-7657</a></li><li class="divider" role="separator"></li><li class="dropdown-header">Kirim Email:</li><li><a>info<i aria-hidden="true" class="fa fa-at"></i>dumetschool.com</a></li><li class="divider" role="separator"></li><li class="dropdown-header">Kirim SMS / WhatsApp:</li><li><a>Cabang Kelapa Gading: 0851-0055-5666</a></li><li><a>Cabang Grogol: 0819-7555-666</a></li><li><a>Cabang Tebet: 0812-1999-9155</a></li><li><a>Cabang Srengseng: 0812-9933-3913</a></li><li><a>Cabang Depok: 0812-9393-3210</a></li></ul></li><li class="dropdown"><a href="https://www.dumetschool.com/blog/" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" role="button">Blog <span class="caret"></span></a>         <ul class="dropdown-menu">
+            
+                <li class="first">        <a href="https://www.dumetschool.com/blog/category/website">Website</a>        
+    </li>
+
+    
+                <li>        <a href="https://www.dumetschool.com/blog/category/marketing">Marketing</a>        
+    </li>
+
+    
+                <li>        <a href="https://www.dumetschool.com/blog/category/teknologi">Teknologi</a>        
+    </li>
+
+    
+                <li>        <a href="https://www.dumetschool.com/blog/category/artikel-bebas">Artikel Bebas</a>        
+    </li>
+
+    
+                <li class="last">        <a href="https://www.dumetschool.com/blog/category/desain">Desain</a>        
+    </li>
+
+
+    </ul>
+</li><li class="dropdown"><a href="https://www.dumetschool.com/blog/Mengenal-Blade-Pada-Laravel#" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" role="button">More <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.dumetschool.com/about/">Tentang Kami</a></li></ul></li><li class="dropdown"><a href="https://www.dumetschool.com/blog/Mengenal-Blade-Pada-Laravel#" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" role="button"><i aria-hidden="true" class="fa fa-search"></i></a><ul class="dropdown-menu"><li class="dropdown-header">Cari artikel dari blog:</li><li class="dropdown-header"><form action="https://www.dumetschool.com/search/postbytitle" class="form-inline" method="POST" name="search_post_bytitle"><div class="form-group"><label class="sr-only" for="exampleInputKeyword3">Masukkan judul...</label><input class="form-control" id="exampleInputKeyword3" name="title" placeholder="Ketik judul..."></div><button class="btn-green btn-ori" type="submit" name="submit">Cari</button></form></li></ul></li></ul></div></div></div></div></nav></div></div>
+        <div class="blog-detail">
+    <div class="container-fluid blog-detail-content">
+				<div class="row">
+						<div class="col-md-2 hidden-sm hidden-xs"></div>
+						<div class="col-md-8">
+								<div class="height40"></div>
+                								<h1 class="text-capitalize">Mengenal Blade Pada Laravel</h1>
+								<div class="height10"></div>
+								<p>
+                    <i class="btr bt-calendar"></i> <span>08/11/2015</span>&nbsp;&nbsp;&nbsp;
+                    <i class="btr bt-user"></i> <span><a href="https://www.dumetschool.com/profile/reza-indra">Reza Indra</a></span>&nbsp;&nbsp;&nbsp;
+                    <i class="btr bt-eye"></i> <span> 2118 </span>&nbsp;&nbsp;&nbsp;
+                    <i class="btr bt-folder"></i> <span><a href="https://www.dumetschool.com/blog/category/website">Website</a></span>
+                </p>
+								<div class="blog-detail-cover" style="background-image: url(&#39;/uploads/post/laravel5thumb95749380.png&#39;)">
+										<img src="./Mengenal Blade Pada Laravel_files/transparent930x350.png" class="img-responsive btn-block">
+								</div>
+                
+                                                            <div id="cke_pastebin">
+	Blade adalah salah satu fitur dalam laravel yang digunakan untuk menampilkan output pada view. Fitur blade ini bisa dibilang sangat canggih, karena kita dapat membuat coding tanpa perlu tag PHP (&lt;?php ?&gt;). Selain menampilkan output, blade juga digunakan untuk membuat layout website.</div>
+<div id="cke_pastebin">
+	&nbsp;</div>
+<div id="cke_pastebin">
+	Untuk membuat coding PHP menggunakan Blade, diawali dengan karakter '@keywordphp'. misalnya:</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="./Mengenal Blade Pada Laravel_files/mengenalbladelaravel7.jpg" style="width: 274px; height: 138px;"></div>
+<div id="cke_pastebin">
+	&nbsp;</div>
+<div id="cke_pastebin">
+	Nama file php wajib disertakan [dot]blade. Contoh: index.blade.php, contact.blade.php.</div>
+<div id="cke_pastebin">
+	&nbsp;</div>
+<div id="cke_pastebin">
+	Nah, sekarang pastikan teman-teman sudah instal laravel. Silahkan buat controller, melalui PHP Artisan dengan nama ContactController. Dan nanti ketik perintah seperti dibawah ini.</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="./Mengenal Blade Pada Laravel_files/mengenalbladelaravel6.jpg" style="width: 475px; height: 314px;"></div>
+<div id="cke_pastebin">
+	&nbsp;</div>
+<div id="cke_pastebin">
+	Silahkan buat Route terlebih dahulu pada App/Http/routes.php.</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="./Mengenal Blade Pada Laravel_files/mengenalbladelaravel5.jpg" style="width: 545px; height: 45px;"></div>
+<div id="cke_pastebin">
+	&nbsp;</div>
+<div id="cke_pastebin">
+	Buat file layouts.blade.php Resources/views dan ketik perintah berikut.</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="./Mengenal Blade Pada Laravel_files/mengenalbladelaravel.jpg" style="width: 399px; height: 280px;"></div>
+<div id="cke_pastebin">
+	&nbsp;</div>
+<div id="cke_pastebin">
+	Buat folder contact pada Resources/views, dan buat file index.blade di dalam folder contact dan ketik perintah berikut.</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="./Mengenal Blade Pada Laravel_files/mengenalbladelaravel2.jpg" style="width: 476px; height: 222px;"></div>
+<div id="cke_pastebin">
+	&nbsp;</div>
+<div id="cke_pastebin">
+	Perhatikan, disitu saya menggunakan @extends('nama_layout'), @section('nama_content') dan @yield('nama_content').&nbsp;</div>
+<div id="cke_pastebin">
+	&nbsp;</div>
+<div id="cke_pastebin">
+	Fungsi dari extends('layouts') adalah penanda bahwa kita menggunakan layouts.blade.php sebagai layout website.</div>
+<div id="cke_pastebin">
+	&nbsp;</div>
+<div id="cke_pastebin">
+	Fungsi dari @yield('content') adalah menampilkan tag html yang berada di dalam @section('nama_content'), jadi kita tinggal buat saja @yield('content'), @yield('menu') atau @yield('footer') pada layout. Kemudian isinya buat dalam @section('menu')/@section('footer').</div>
+<div>
+	&nbsp;</div>
+<div>
+	Kalau sudah selesai, mari kita jalankan. Kita sudah berhasil menampilkan isi dari body dan title.</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="./Mengenal Blade Pada Laravel_files/mengenalbladelaravel3.jpg" style="width: 515px; height: 261px;"></div>
+<div>
+	&nbsp;</div>
+<div>
+	Berikut adalah source htmlnya.</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="./Mengenal Blade Pada Laravel_files/mengenalbladelaravel4.jpg" style="width: 514px; height: 423px;"></div>
+
+<p>&nbsp;</p>
+
+                                    
+                <p><i class="fa fa-tags fa-fw"></i>
+                                        No data.
+                                  </p>
+						</div>
+						<div class="col-md-2 hidden-sm hidden-xs"></div>
+				</div>
+		</div><!-- /blog-detail-content -->
+
+    <div class="height20"></div>
+    <div class="container-fluid bgf6f6f6 text-center offer1">
+        <div class="row">
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
+            <div class="col-md-10">
+                                    <h3><a href="http://dumetschool.com/kursus-web-master">Cara Cepat Pintar Membuat Website, Tanpa Perlu Basic IT</a></h3>
+                    <div class="height10"></div>
+                    <p class="lead">
+                                            </p><p>Membuat website perusahaan, portal berita, blog, katalog online, dan e-commerce.</p>
+                                        <p></p>
+                    <div class="height20"></div>
+                    <a href="http://dumetschool.com/kursus-web-master" class="btn btn-green">Learn More</a>
+                            </div>
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
+        </div>
+    </div><!-- offertextone -->
+
+    <div class="height40"></div>
+		<div class="container-fluid blog-related">
+				<div class="row">
+						<div class="col-md-2 hidden-sm hidden-xs"></div>
+						<div class="col-md-8">
+								<h3>Related Posts</h3>
+								<div class="height20"></div>
+								<div class="row">
+                    										<div class="col-md-4 col-sm-4">
+												<a href="https://www.dumetschool.com/blog/Menggabungkan-Beberapa-Nilai-di-Javascript" class="blog-related-thumbnail hidden-xs" style="background-image: url(&#39;/uploads/post/javascript_gabungkan_2_string.png&#39;)">
+														<img src="./Mengenal Blade Pada Laravel_files/transparent300x150.png" class="img-responsive btn-block">
+												</a>
+												<div class="height10 hidden-xs"></div>
+												<h3><a href="https://www.dumetschool.com/blog/Menggabungkan-Beberapa-Nilai-di-Javascript">Menggabungkan Beberapa Nilai di Javascript</a></h3>
+										</div>
+                    										<div class="col-md-4 col-sm-4">
+												<a href="https://www.dumetschool.com/blog/mengenal-fungsi-splice-pada-javascript" class="blog-related-thumbnail hidden-xs" style="background-image: url(&#39;/uploads/post/3a396947fa3fde9a078b2778ac881957.png&#39;)">
+														<img src="./Mengenal Blade Pada Laravel_files/transparent300x150.png" class="img-responsive btn-block">
+												</a>
+												<div class="height10 hidden-xs"></div>
+												<h3><a href="https://www.dumetschool.com/blog/mengenal-fungsi-splice-pada-javascript">Mengenal Fungsi Splice Pada Javascript</a></h3>
+										</div>
+                    										<div class="col-md-4 col-sm-4">
+												<a href="https://www.dumetschool.com/blog/Apa-itu-API" class="blog-related-thumbnail hidden-xs" style="background-image: url(&#39;/uploads/post/apis-for-marketers.png&#39;)">
+														<img src="./Mengenal Blade Pada Laravel_files/transparent300x150.png" class="img-responsive btn-block">
+												</a>
+												<div class="height10 hidden-xs"></div>
+												<h3><a href="https://www.dumetschool.com/blog/Apa-itu-API">Apa itu API?</a></h3>
+										</div>
+                    								</div>
+						</div>
+						<div class="col-md-2 hidden-sm hidden-xs"></div>
+				</div>
+		</div><!-- /blog-related -->
+    <div class="container-fluid blog-related offer2">
+        <div class="row">
+            <div class="col-md-2 hidden-sm hidden-xs"></div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                                                    <a href="http://dumetschool.com/kursus-web-master" class="blog-related-thumbnail hidden-xs" style="background-image: url(&#39;/uploads/offerimg/c75f8005494e87397e7ba78be553c259.jpeg&#39;)">
+                                <img src="./Mengenal Blade Pada Laravel_files/transparent300x150.png" class="img-responsive btn-block">
+                            </a>
+                            <div class="height10 hidden-xs"></div>
+                            <h3><a href="http://dumetschool.com/kursus-web-master">Cara Cepat Pintar Membuat Website, Tanpa Perlu Basic IT</a></h3>
+                                            </div>
+                    <div class="col-md-4 col-sm-4">
+                                                    <a href="http://dumetschool.com/kursus-digital-marketing" class="blog-related-thumbnail hidden-xs" style="background-image: url(&#39;/uploads/offerimg/c7caf2c56d66289c6e655dc2da349616.png&#39;)">
+                                <img src="./Mengenal Blade Pada Laravel_files/transparent300x150.png" class="img-responsive btn-block">
+                            </a>
+                            <div class="height10 hidden-xs"></div>
+                            <h3><a href="http://dumetschool.com/kursus-digital-marketing">Cara Promosi di Google dan Social Media</a></h3>
+                                            </div>
+                    <div class="col-md-4 col-sm-4">
+                                                    <a href="http://dumetschool.com/kursus-graphic-design" class="blog-related-thumbnail hidden-xs" style="background-image: url(&#39;/uploads/offerimg/78fadb9e5cde38c6bf87f26ff313b0d2.jpeg&#39;)">
+                                <img src="./Mengenal Blade Pada Laravel_files/transparent300x150.png" class="img-responsive btn-block">
+                            </a>
+                            <div class="height10 hidden-xs"></div>
+                            <h3><a href="http://dumetschool.com/kursus-graphic-design">Belajar Mendesain Logo, Brosur, Majalah, Edit Foto</a></h3>
+                                            </div>
+                </div>
+            </div>
+            <div class="col-md-2 hidden-sm hidden-xs"></div>
+        </div>
+    </div><!-- offerimage -->
+
+		<div class="height40"></div>
+    <div class="container-fluid text-center bgf6f6f6 offer3">
+        <div class="row">
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
+            <div class="col-md-10">
+                                    <h3><a href="http://dumetschool.com/kursus-web-master">Cara Cepat Pintar Membuat Website, Tanpa Perlu Basic IT</a></h3>
+                    <div class="height10"></div>
+                    <p class="lead">
+                                            </p><p>Membuat website perusahaan, portal berita, blog, katalog online, dan e-commerce.</p>
+                                        <p></p>
+                    <div class="height20"></div>
+                    <a href="http://dumetschool.com/kursus-web-master" class="btn btn-green">Learn More</a>
+                            </div>
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
+        </div>
+    </div><!-- offertexttwo -->
+</div><!-- /blog-detail-content -->
+                    <div class="bgnoise container-fluid footer"><div class="row"><div class="col-md-1 hidden-sm hidden-xs"></div><div class="col-md-10"><div class="row follow"><div class="col-md-12"><p class="sosmed">Follow us on: <a href="https://www.facebook.com/dumetschool" target="_blank"><i aria-hidden="true" class="fa fa-facebook-official"></i></a> <a href="https://twitter.com/dumetschool" target="_blank"><i aria-hidden="true" class="fa fa-twitter"></i></a> <a href="https://www.youtube.com/channel/UCBWFSRzezvSj1LEMXUZnFIA" target="_blank"><i aria-hidden="true" class="fa fa-youtube-play"></i></a> <a href="https://www.instagram.com/dumetschool/" target="_blank"><i aria-hidden="true" class="fa fa-instagram"></i></a></p></div></div><div class="row office-title"><div class="col-md-12"><h3 class="fontsize36">Lokasi Kantor</h3></div></div><div class="row office"><div class="col-md-4"><dl><dt>Kelapa Gading</dt><dd>Rukan Artha Gading Niaga Blok i - 23, Jalan Boulevard Artha Gading</dd><dd>Kelapa Gading, Jakarta Utara 14240</dd><dd>(Belakang Mall Artha Gading)</dd><dd>Telp: <a href="tel:02145850387">(021) 4585-0387</a></dd><div class="height10"></div></dl><dl><dt>Grogol</dt><dd>Ruko Jalan Taman Daan Mogot Raya No. 23</dd><dd>Kel. Tanjung Duren Utara Kec. Grogol Petamburan, Jakarta Barat 11470</dd><dd>(Belakang Mall Citraland dan Kampus UNTAR II)</dd><dd>Telp: <a href="tel:02129411188">(021) 2941-1188</a></dd><div class="height10"></div></dl><dl><dt>Tebet</dt><dd>Rukan Crown Palace Blok A no 12, Jl Prof Dr Soepomo no 231 (Samping Universitas Sahid). Kec. Tebet, Kel. Menteng Dalam</dd><dd>(± 1 Menit dari Tugu Pancoran)</dd><dd>Jakarta Selatan 12870</dd><dd>Telp: <a href="tel:02122983886">(021) 2298-3886</a></dd><div class="height10"></div></dl></div><div class="col-md-4"><dl><dt>Srengseng</dt><dd>Ruko Permata Regensi Blok B - 18, Jalan Haji Kelik</dd><dd>Srengseng, Kebon Jeruk, Jakarta Barat 11630</dd><dd>(Depan Hutan Kota Srengseng)</dd><dd>Telp: <a href="tel:02158908355">(021) 5890-8355</a></dd><div class="height10"></div></dl><dl><dt>Depok</dt><dd>Ruko Jalan Kartini Raya No. 53</dd><dd>Pancoran Mas, Depok 16436</dd><dd>(± 5 Menit dari Kantor Walikota Depok)</dd><dd>Telp: <a href="tel:02177207657">(021) 7720-7657</a></dd><div class="height10"></div></dl><div>Buka setiap hari Senin - Minggu jam 09.00 s/d 21.00</div><div class="height30"></div></div><div class="col-md-4"><dl><dt>SMS / WhatsApp / Email</dt><dd>Kelapa Gading: <a href="tel:085100555666">0851-0055-5666</a></dd><dd>Grogol: <a href="tel:08197555666">0819-7555-666</a></dd><dd>Tebet: <a href="tel:081219999155">0812-1999-9155</a></dd><dd>Srengseng: <a href="tel:081299333913">0812-9933-3913</a></dd><dd>Depok: <a href="tel:081293933210">0812-9393-3210</a></dd><div class="height10"></div><dd><i aria-hidden="true" class="fa fa-envelope-o"></i> <a href="mailto:info@dumetschool.com">info<i aria-hidden="true" class="fa fa-at"></i>dumetschool.com</a></dd><div class="height10"></div><div class="fb-share-button" data-href="http://dumetschool.com/" data-layout="button_count" data-mobile-iframe="true" data-size="large"><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdumetschool.com%2F&amp;src=sdkpreparse" target="_blank" class="fb-xfbml-parse-ignore">Share</a></div><div class="height30"></div><img class="img-responsive" src="./Mengenal Blade Pada Laravel_files/badge-aca.png"></dl></div></div><div class="row copyright"><div class="col-md-12"><p><small>Copyright © 2017 <a href="https://www.dumetschool.com/">DUMET School</a>. All rights reserved. <a href="https://www.dumetschool.com/privacy">Privacy</a></small></p></div></div></div><div class="col-md-1 hidden-sm hidden-xs"></div></div></div>
+            
+
+</body></html>
